@@ -11,14 +11,14 @@
   <body>
     <!-- nav bar -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">PHP Login Test</a>
+        <a class="navbar-brand" href="index.php">PHP Login Test</a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon"></span>
          </button>
            <div class="collapse navbar-collapse" id="navbarText">
        <ul class="navbar-nav mr-auto">
          <li class="nav-item active">
-      <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+      <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
          </li>
          <li class="nav-item">
       <a class="nav-link" href="#">Blah</a>
@@ -35,14 +35,14 @@
       <div id="loginForm">
         <form>
         <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" id="username" name="uid" placeholder="Username">
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" name="pwd" placeholder="Password">
         </div>
-        <span><button type="button" class="btn btn-primary">Login</button></span>
+        <span><button type="submit" class="btn btn-primary">Login</button></span>
         <span><button type="button" class="btn btn-info" id="signBtn">Sign Up</button></span>
       </form>
     </div>
