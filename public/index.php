@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -33,42 +37,46 @@
     <div id="content" class="container">
       <!-- login form -->
       <div id="loginForm">
-        <form>
+        <form action="includes/login.inc.php" method="POST">
         <div class="form-group">
           <label for="username">Username</label>
-          <input type="text" class="form-control" id="username" name="uid" placeholder="Username">
+          <input type="text" class="form-control" id="username" name="userid" placeholder="Username">
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" class="form-control" id="password" name="pwd" placeholder="Password">
+          <input type="password" class="form-control" id="password" name="passwd" placeholder="Password">
         </div>
-        <span><button type="submit" class="btn btn-primary">Login</button></span>
+        <span><button type="submit" class="btn btn-primary" name="submit">Login</button></span>
         <span><button type="button" class="btn btn-info" id="signBtn">Sign Up</button></span>
       </form>
     </div>
 
     <!-- sign up form -->
     <div id="signUpForm">
-      <form>
+      <form action="includes/signUp.inc.php" method="POST">
         <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputEmail4">Email</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+          <div class="form-group col-md-4">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
           </div>
-          <div class="form-group col-md-6">
+          <div class="form-group col-md-4">
+            <label for="userName">Username</label>
+            <input type="text" class="form-control" id="userName" name="uid" placeholder="Username">
+          </div>
+          <div class="form-group col-md-4">
             <label for="inputPassword4">Password</label>
-            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+            <input type="password" class="form-control" id="inputPassword4" name="pwd" placeholder="Password">
           </div>
         </div>
         <div class="form-group">
           <label for="fName">First Name</label>
-          <input type="text" class="form-control" id="fName" placeholder="First name">
+          <input type="text" class="form-control" id="fName" name="first" placeholder="First name">
         </div>
         <div class="form-group">
-          <label for="Lname">Last Name</label>
-          <input type="text" class="form-control" id="Lname" placeholder="Last Name">
+          <label for="lName">Last Name</label>
+          <input type="text" class="form-control" id="lName" name="last" placeholder="Last Name">
         </div>
-        <button type="button" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" name="signUp">Submit</button>
       </form>
     </div>
   </div>
